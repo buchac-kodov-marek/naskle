@@ -28,6 +28,17 @@ p {
   }
 }
 
+h3 {
+  color: #9b2c05;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media (max-width: 950px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
 .inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -264,6 +275,7 @@ header .responsive_nav ul li a {
 .banner .left .banner_mobile h1 {
   color: #f3f1ef;
   font-size: 1.9rem;
+  text-align: center;
 }
 @media (max-width: 650px) {
   .banner .left .banner_mobile h1 {
@@ -643,4 +655,97 @@ footer .footer_bottom div div {
   justify-content: center;
   align-items: center;
   gap: 0.2rem;
+}
+
+.banner_text {
+  color: #f3f1ef;
+  width: 30%;
+}
+@media (max-width: 1000px) {
+  .banner_text {
+    text-align: center;
+  }
+}
+
+.izby {
+  margin: 2rem 0;
+}
+.izby .inner h2 {
+  margin: 1rem 0 2rem 0;
+}
+.izby .inner .offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.3rem;
+}
+@media (max-width: 1050px) {
+  .izby .inner .offer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .izby .inner .offer {
+    grid-template-columns: 1fr;
+  }
+}
+.izby .inner .offer .izba {
+  border-radius: 0.3rem;
+  padding: 1.2rem 0.9rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f1ef;
+}
+.izby .inner .offer .izba div {
+  gap: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.izby .inner .offer .izba div .opis {
+  font-size: 0.9rem;
+}
+.izby .inner .offer .izba div p {
+  text-align: center;
+  font-size: 1rem;
+}
+.izby .inner .offer .izba a {
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  background-color: #9b2c05;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  color: #f3f1ef;
+  text-decoration: none;
+}
+
+.balicky {
+  margin-top: 3rem;
+  background-color: #f4c4b8;
+  padding: 3rem 0 3.8rem 0;
+}
+@media (max-width: 700px) {
+  .balicky {
+    padding: 2.5rem 0 3.3rem 0;
+  }
+}
+.balicky .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+.balicky .inner a {
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  background-color: #9b2c05;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  color: #f3f1ef;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

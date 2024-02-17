@@ -30,6 +30,14 @@ p {
 		font-size: 1rem;
 	}
 }
+h3 {
+	color: $red;
+	font-size: 1.4rem;
+	text-align: center;
+	@media (max-width: 950px) {
+		font-size: 1.25rem;
+	}
+}
 .inner {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -255,6 +263,7 @@ header {
 			h1 {
 				color: $siva;
 				font-size: 1.9rem;
+				text-align: center;
 				@media (max-width: 650px) {
 					font-size: 1.7rem;
 				}
@@ -591,6 +600,88 @@ footer {
 				align-items: center;
 				gap: 0.2rem;
 			}
+		}
+	}
+}
+.banner_text {
+	color: $siva;
+	width: 30%;
+	@media (max-width: 1000px) {
+		text-align: center;
+	}
+}
+.izby {
+	margin: 2rem 0;
+	.inner {
+		h2 {
+			margin: 1rem 0 2rem 0;
+		}
+		.offer {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 1.3rem;
+			@media (max-width: 1050px) {
+				grid-template-columns: 1fr 1fr;
+			}
+			@media (max-width: 700px) {
+				grid-template-columns: 1fr;
+			}
+			.izba {
+				border-radius: 0.3rem;
+				padding: 1.2rem 0.9rem;
+				display: flex;
+				gap: 2rem;
+				align-items: center;
+				flex-direction: column;
+				background-color: $siva;
+				div {
+					gap: 1rem;
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.opis {
+						font-size: 0.9rem;
+					}
+					p {
+						text-align: center;
+						font-size: 1rem;
+					}
+				}
+				a {
+					width: min-content;
+					white-space: nowrap;
+					background-color: $red;
+					padding: 0.4rem 1rem;
+					border-radius: 0.2rem;
+					color: $siva;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+.balicky {
+	margin-top: 3rem;
+	background-color: $telova;
+	padding: 3rem 0 3.8rem 0;
+	@media (max-width: 700px) {
+		padding: 2.5rem 0 3.3rem 0;
+	}
+	.inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.6rem;
+		a {
+			width: min-content;
+			white-space: nowrap;
+			background-color: $red;
+			padding: 0.4rem 1rem;
+			border-radius: 0.2rem;
+			color: $siva;
+			text-decoration: none;
 		}
 	}
 }
