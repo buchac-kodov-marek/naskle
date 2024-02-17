@@ -104,51 +104,114 @@ header {
 	position: relative;
 	.left {
 		background-color: $brown;
-		flex: 1;
+		width: calc(50% - 9rem);
 		height: 100%;
 	}
 	.right {
+		flex: 1;
 		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 		position: relative;
 		.half_circle {
 			position: absolute;
 			top: 0;
 			left: 0;
 			height: 100%;
-			width: 2rem;
-			overflow: hidden;
+			.base {
+				overflow: hidden;
+				position: relative;
+				height: 100%;
+				width: 3rem;
+				.circle {
+					position: absolute;
+					top: 50%;
+					height: 150%;
+					width: 600%;
+					border-radius: 50%;
+					background-color: $brown;
+					transform: translate(-85%, -50%);
+				}
+			}
 		}
 		img {
 			height: 100%;
 		}
 	}
-	.bannner_content {
+	.content_r {
+		width: 100%;
 		height: 100%;
 		position: absolute;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 2.2rem;
-		align-items: flex-start;
-		h1 {
-			color: $siva;
-			font-size: 2rem;
-		}
-		a {
+		.bannner_content {
+			height: 100%;
 			display: flex;
-			text-decoration: none;
-			align-items: center;
-			gap: 1rem;
-			background-color: $red;
-			padding: 0.5rem 1rem;
-			p {
+			flex-direction: column;
+			justify-content: center;
+			gap: 2.2rem;
+			align-items: flex-start;
+			h1 {
 				color: $siva;
-				font-weight: 700;
-				font-size: 1.08rem;
+				font-size: 2rem;
 			}
-			img {
-				height: 1.6rem;
+			a {
+				display: flex;
+				text-decoration: none;
+				align-items: center;
+				gap: 1rem;
+				background-color: $red;
+				padding: 0.5rem 1rem;
+				p {
+					color: $siva;
+					font-weight: 700;
+					font-size: 1.08rem;
+				}
+				img {
+					height: 1.6rem;
+				}
 			}
 		}
 	}
+}
+.ponuka {
+	background-color: $telova;
+	padding-top: 2.8rem;
+	padding-bottom: 2.45rem;
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 3rem;
+		.ponuky {
+			display: flex;
+			flex-direction: column;
+			h3 {
+				text-transform: uppercase;
+				color: $red;
+				font-size: 1.16rem;
+			}
+			p {
+				margin-top: 2.5rem;
+				font-weight: 300;
+				font-size: 1.15rem;
+				color: $dark_text;
+				flex: 1;
+			}
+			a {
+				display: flex;
+				gap: 1rem;
+				color: $red;
+				text-decoration: none;
+				margin-top: 2rem;
+				font-weight: 700;
+				font-size: 1.1rem;
+				img {
+					height: 1.5rem;
+				}
+			}
+		}
+	}
+}
+.about {
+	display: flex;
+	flex-direction: column;
 }

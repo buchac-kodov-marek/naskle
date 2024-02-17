@@ -93,11 +93,15 @@ header .sub_header {
 }
 .banner .left {
   background-color: #502718;
-  flex: 1;
+  width: calc(50% - 9rem);
   height: 100%;
 }
 .banner .right {
+  flex: 1;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 .banner .right .half_circle {
@@ -105,26 +109,43 @@ header .sub_header {
   top: 0;
   left: 0;
   height: 100%;
-  width: 2rem;
+}
+.banner .right .half_circle .base {
   overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 3rem;
+}
+.banner .right .half_circle .base .circle {
+  position: absolute;
+  top: 50%;
+  height: 150%;
+  width: 600%;
+  border-radius: 50%;
+  background-color: #502718;
+  transform: translate(-85%, -50%);
 }
 .banner .right img {
   height: 100%;
 }
-.banner .bannner_content {
+.banner .content_r {
+  width: 100%;
   height: 100%;
   position: absolute;
+}
+.banner .content_r .bannner_content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2.2rem;
   align-items: flex-start;
 }
-.banner .bannner_content h1 {
+.banner .content_r .bannner_content h1 {
   color: #f3f1ef;
   font-size: 2rem;
 }
-.banner .bannner_content a {
+.banner .content_r .bannner_content a {
   display: flex;
   text-decoration: none;
   align-items: center;
@@ -132,11 +153,55 @@ header .sub_header {
   background-color: #9b2c05;
   padding: 0.5rem 1rem;
 }
-.banner .bannner_content a p {
+.banner .content_r .bannner_content a p {
   color: #f3f1ef;
   font-weight: 700;
   font-size: 1.08rem;
 }
-.banner .bannner_content a img {
+.banner .content_r .bannner_content a img {
   height: 1.6rem;
+}
+
+.ponuka {
+  background-color: #f4c4b8;
+  padding-top: 2.8rem;
+  padding-bottom: 2.45rem;
+}
+.ponuka .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+.ponuka .content .ponuky {
+  display: flex;
+  flex-direction: column;
+}
+.ponuka .content .ponuky h3 {
+  text-transform: uppercase;
+  color: #9b2c05;
+  font-size: 1.16rem;
+}
+.ponuka .content .ponuky p {
+  margin-top: 2.5rem;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: #502718;
+  flex: 1;
+}
+.ponuka .content .ponuky a {
+  display: flex;
+  gap: 1rem;
+  color: #9b2c05;
+  text-decoration: none;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.ponuka .content .ponuky a img {
+  height: 1.5rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
