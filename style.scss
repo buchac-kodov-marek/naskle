@@ -109,25 +109,74 @@ header {
 }
 .banner {
 	display: flex;
-	height: 23rem;
 	position: relative;
+	@media (max-width: 1000px) {
+		flex-direction: column-reverse;
+	}
 	.left {
 		background-color: $brown;
 		width: calc(50% - 9rem);
-		height: 100%;
+		height: 23rem;
+		@media (max-width: 1000px) {
+			width: 100%;
+			height: auto;
+			padding: 2rem 0;
+		}
+		.banner_mobile {
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			gap: 2.2rem;
+			align-items: flex-start;
+			h1 {
+				color: $siva;
+				font-size: 2rem;
+			}
+			a {
+				display: flex;
+				text-decoration: none;
+				align-items: center;
+				gap: 1rem;
+				background-color: $red;
+				padding: 0.5rem 1rem;
+				p {
+					color: $siva;
+					font-weight: 700;
+					font-size: 1.08rem;
+				}
+				img {
+					height: 1.6rem;
+				}
+			}
+			@media (max-width: 1000px) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
 	}
 	.right {
 		flex: 1;
-		height: 100%;
+		height: 23rem;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		position: relative;
+		@media (max-width: 1000px) {
+			width: 100%;
+			flex: none;
+		}
+		@media (max-width: 700px) {
+			height: 15rem;
+		}
 		.half_circle {
 			position: absolute;
 			top: 0;
 			left: 0;
 			height: 100%;
+			@media (max-width: 1000px) {
+				display: none;
+			}
 			.base {
 				overflow: hidden;
 				position: relative;
@@ -150,8 +199,11 @@ header {
 	}
 	.content_r {
 		width: 100%;
-		height: 100%;
+		height: 23rem;
 		position: absolute;
+		@media (max-width: 1000px) {
+			display: none;
+		}
 		.bannner_content {
 			height: 100%;
 			display: flex;
@@ -190,6 +242,9 @@ header {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 3rem;
+		@media (max-width: 800px) {
+			grid-template-columns: 1fr;
+		}
 		.ponuky {
 			display: flex;
 			flex-direction: column;
@@ -224,11 +279,15 @@ header {
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	@media (max-width: 900px) {
+		margin-top: 3rem;
+		gap: 0;
+	}
 	.content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		@media (max-width: 1000px) {
-			gap: 3rem;
+			gap: 1rem;
 		}
 		@media (max-width: 800px) {
 			grid-template-columns: 1fr;
@@ -239,6 +298,9 @@ header {
 			gap: 3rem;
 			margin-top: 4rem;
 			margin-bottom: 3rem;
+			@media (max-width: 800px) {
+				margin-top: 2rem;
+			}
 			a {
 				text-decoration: none;
 				background-color: $red;
@@ -252,21 +314,34 @@ header {
 		}
 		.right {
 			margin-top: 2rem;
-			position: relative;
 			display: flex;
 			justify-content: flex-end;
 			align-items: flex-end;
-
+			.container {
+				position: relative;
+				padding-left: 2.3rem;
+			}
+			@media (max-width: 800px) {
+				justify-content: center;
+				align-items: center;
+			}
 			.square {
 				width: 22rem;
 				aspect-ratio: 6/4.5;
 				background-color: $red;
+				@media (max-width: 800px) {
+					width: 70vw;
+				}
 			}
+
 			img {
 				position: absolute;
 				bottom: 2.3rem;
 				right: 2.3rem;
 				width: 22rem;
+				@media (max-width: 800px) {
+					width: 70vw;
+				}
 			}
 		}
 	}
