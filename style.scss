@@ -10,24 +10,6 @@ $dark_text: #502718;
 
 * {
 	font-family: "Noto Serif", serif;
-}
-img {
-	height: 100px;
-	width: 100px;
-}
-
-div {
-	height: 100px;
-	width: 100px;
-	overflow: hidden;
-	position: relative;
-	.element {
-		position: absolute;
-		top: 50%;
-		height: 300px;
-		width: 600px;
-		border-radius: 50%;
-		background-color: red;
-		transform: translate(-90%, -50%);
-	}
+	margin: 0;
+	padding: 0;
 }
