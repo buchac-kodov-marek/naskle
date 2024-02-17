@@ -69,8 +69,17 @@ header {
 			}
 		}
 		.nav_logo {
+			position: relative;
+			.skryte {
+				visibility: hidden;
+				position: relative;
+			}
 			img {
+				top: 0;
+				left: 0;
+				position: absolute;
 				height: 130%;
+				z-index: 100;
 			}
 		}
 	}
@@ -87,5 +96,59 @@ header {
 			$sub_header_gradient2,
 			$sub_header_gradient1
 		);
+	}
+}
+.banner {
+	display: flex;
+	height: 23rem;
+	position: relative;
+	.left {
+		background-color: $brown;
+		flex: 1;
+		height: 100%;
+	}
+	.right {
+		height: 100%;
+		position: relative;
+		.half_circle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 2rem;
+			overflow: hidden;
+		}
+		img {
+			height: 100%;
+		}
+	}
+	.bannner_content {
+		height: 100%;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 2.2rem;
+		align-items: flex-start;
+		h1 {
+			color: $siva;
+			font-size: 2rem;
+		}
+		a {
+			display: flex;
+			text-decoration: none;
+			align-items: center;
+			gap: 1rem;
+			background-color: $red;
+			padding: 0.5rem 1rem;
+			p {
+				color: $siva;
+				font-weight: 700;
+				font-size: 1.08rem;
+			}
+			img {
+				height: 1.6rem;
+			}
+		}
 	}
 }

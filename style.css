@@ -66,11 +66,77 @@ header nav .lang .language div a {
   font-size: 0.8rem;
   font-weight: 700;
 }
+header nav .nav_logo {
+  position: relative;
+}
+header nav .nav_logo .skryte {
+  visibility: hidden;
+  position: relative;
+}
 header nav .nav_logo img {
+  top: 0;
+  left: 0;
+  position: absolute;
   height: 130%;
+  z-index: 100;
 }
 header .sub_header {
   height: 0.4rem;
   width: 100%;
   background-image: linear-gradient(to right, #e39f88, #964b25, #e39f88, #964b25, #e39f88, #964b25, #e39f88);
+}
+
+.banner {
+  display: flex;
+  height: 23rem;
+  position: relative;
+}
+.banner .left {
+  background-color: #502718;
+  flex: 1;
+  height: 100%;
+}
+.banner .right {
+  height: 100%;
+  position: relative;
+}
+.banner .right .half_circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2rem;
+  overflow: hidden;
+}
+.banner .right img {
+  height: 100%;
+}
+.banner .bannner_content {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.2rem;
+  align-items: flex-start;
+}
+.banner .bannner_content h1 {
+  color: #f3f1ef;
+  font-size: 2rem;
+}
+.banner .bannner_content a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 1rem;
+  background-color: #9b2c05;
+  padding: 0.5rem 1rem;
+}
+.banner .bannner_content a p {
+  color: #f3f1ef;
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+.banner .bannner_content a img {
+  height: 1.6rem;
 }/*# sourceMappingURL=style.css.map */
