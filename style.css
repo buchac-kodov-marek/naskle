@@ -221,6 +221,16 @@ header .sub_header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media (max-width: 1000px) {
+  .about .content {
+    gap: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .about .content {
+    grid-template-columns: 1fr;
+  }
+}
 .about .content .left {
   display: flex;
   flex-direction: column;
@@ -267,6 +277,17 @@ footer .top .inner {
   gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(8em, 14rem));
 }
+@media (max-width: 600px) {
+  footer .top .inner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  footer .top .inner .footer_logo {
+    display: flex;
+    justify-content: center;
+  }
+}
 footer .top .inner .footer_logo img {
   height: 11rem;
 }
@@ -274,6 +295,11 @@ footer .top .inner .nav {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+}
+@media (max-width: 600px) {
+  footer .top .inner .nav {
+    align-items: center;
+  }
 }
 footer .top .inner .nav a {
   text-decoration: none;
@@ -285,6 +311,11 @@ footer .top .inner .kontakt {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+@media (max-width: 600px) {
+  footer .top .inner .kontakt {
+    align-items: center;
+  }
 }
 footer .top .inner .kontakt .phone,
 footer .top .inner .kontakt .mail {
@@ -322,6 +353,11 @@ footer .top .inner .fb {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 600px) {
+  footer .top .inner .fb {
+    justify-content: center;
+  }
+}
 footer .top .inner .fb a {
   font-weight: 700;
   color: #9b2c05;
@@ -330,4 +366,26 @@ footer .top .inner .fb a {
 }
 footer .top .inner .fb img {
   height: 1.4rem;
+}
+footer .footer_bottom {
+  padding: 0.9rem 0;
+  background-color: #9b2c05;
+}
+footer .footer_bottom div {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_bottom div p,
+footer .footer_bottom div a {
+  color: #f3f1ef;
+  font-size: 0.8rem;
+}
+footer .footer_bottom div img {
+  height: 0.6rem;
+}
+footer .footer_bottom div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }/*# sourceMappingURL=style.css.map */

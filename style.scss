@@ -227,6 +227,12 @@ header {
 	.content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		@media (max-width: 1000px) {
+			gap: 3rem;
+		}
+		@media (max-width: 800px) {
+			grid-template-columns: 1fr;
+		}
 		.left {
 			display: flex;
 			flex-direction: column;
@@ -250,6 +256,7 @@ header {
 			display: flex;
 			justify-content: flex-end;
 			align-items: flex-end;
+
 			.square {
 				width: 22rem;
 				aspect-ratio: 6/4.5;
@@ -272,7 +279,14 @@ footer {
 			display: grid;
 			gap: 5rem;
 			grid-template-columns: repeat(auto-fit, minmax(8em, 14rem));
+			@media (max-width: 600px) {
+				grid-template-columns: 1fr;
+			}
 			.footer_logo {
+				@media (max-width: 600px) {
+					display: flex;
+					justify-content: center;
+				}
 				img {
 					height: 11rem;
 				}
@@ -281,6 +295,9 @@ footer {
 				display: flex;
 				flex-direction: column;
 				gap: 0.4rem;
+				@media (max-width: 600px) {
+					align-items: center;
+				}
 				a {
 					text-decoration: none;
 					color: $red;
@@ -292,6 +309,9 @@ footer {
 				display: flex;
 				flex-direction: column;
 				gap: 1.5rem;
+				@media (max-width: 600px) {
+					align-items: center;
+				}
 				.phone,
 				.mail {
 					display: flex;
@@ -325,6 +345,9 @@ footer {
 			.fb {
 				display: flex;
 				gap: 1rem;
+				@media (max-width: 600px) {
+					justify-content: center;
+				}
 				a {
 					font-weight: 700;
 					color: $red;
@@ -337,17 +360,26 @@ footer {
 			}
 		}
 	}
-	// .bottom,
-	// div {
-	// 	background-color: $red;
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	p,
-	// 	a {
-	// 		color: $siva;
-	// 	}
-	// 	img {
-	// 		height: 0.8rem;
-	// 	}
-	// }
+	.footer_bottom {
+		padding: 0.9rem 0;
+		background-color: $red;
+		div {
+			display: flex;
+			justify-content: space-between;
+			p,
+			a {
+				color: $siva;
+				font-size: 0.8rem;
+			}
+			img {
+				height: 0.6rem;
+			}
+			div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.2rem;
+			}
+		}
+	}
 }
