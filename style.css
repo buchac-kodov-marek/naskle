@@ -3,17 +3,29 @@
   font-family: "Noto Serif", serif;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 h2 {
   color: #9b2c05;
   font-size: 2rem;
+  text-align: center;
+}
+@media (max-width: 950px) {
+  h2 {
+    font-size: 1.6rem;
+  }
 }
 
 p {
   font-weight: 300;
   font-size: 1.12rem;
   color: #502718;
+}
+@media (max-width: 950px) {
+  p {
+    font-size: 1rem;
+  }
 }
 
 .inner {
@@ -33,6 +45,10 @@ p {
   font-weight: 700;
 }
 
+.responsive_nav {
+  transform: translateX(105%);
+}
+
 header {
   background-color: #f3f1ef;
 }
@@ -40,6 +56,64 @@ header nav {
   display: flex;
   justify-content: space-between;
   height: 6.5rem;
+}
+@media (max-width: 950px) {
+  header nav {
+    height: 4rem;
+  }
+}
+header nav .mobile_language {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1rem;
+}
+@media (max-width: 950px) {
+  header nav .mobile_language {
+    display: flex;
+  }
+}
+header nav .mobile_language img {
+  width: 4rem;
+}
+header nav .mobile_language div {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .mobile_language div a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+header nav .hamburger {
+  cursor: pointer;
+  display: none;
+  width: 4rem;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+@media (max-width: 950px) {
+  header nav .hamburger {
+    display: flex;
+  }
+}
+header nav .hamburger div {
+  background-color: #9b2c05;
+  height: 3px;
+  width: 27px;
+}
+@media (max-width: 950px) {
+  header nav .link {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  header nav #jazyk {
+    display: none;
+  }
 }
 header nav a,
 header nav .lang {
@@ -96,6 +170,63 @@ header .sub_header {
   width: 100%;
   background-image: linear-gradient(to right, #e39f88, #964b25, #e39f88, #964b25, #e39f88, #964b25, #e39f88);
 }
+header .open {
+  transform: translateX(0%);
+}
+header .responsive_nav {
+  transition: 1s;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f3f1ef;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+}
+header .responsive_nav .close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+header .responsive_nav .close .cross {
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .responsive_nav .close .cross div {
+  position: absolute;
+  background-color: #9b2c05;
+  height: 3px;
+  width: 30px;
+  transform: rotate(45deg);
+}
+header .responsive_nav .close .cross div:first-child {
+  transform: rotate(-45deg);
+}
+header .responsive_nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+header .responsive_nav ul li {
+  list-style: none;
+}
+header .responsive_nav ul li a {
+  color: #9b2c05;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
 
 .banner {
   display: flex;
@@ -125,9 +256,19 @@ header .sub_header {
   gap: 2.2rem;
   align-items: flex-start;
 }
+@media (max-width: 650px) {
+  .banner .left .banner_mobile {
+    gap: 1.5rem;
+  }
+}
 .banner .left .banner_mobile h1 {
   color: #f3f1ef;
-  font-size: 2rem;
+  font-size: 1.9rem;
+}
+@media (max-width: 650px) {
+  .banner .left .banner_mobile h1 {
+    font-size: 1.7rem;
+  }
 }
 .banner .left .banner_mobile a {
   display: flex;
@@ -141,6 +282,11 @@ header .sub_header {
   color: #f3f1ef;
   font-weight: 700;
   font-size: 1.08rem;
+}
+@media (max-width: 650px) {
+  .banner .left .banner_mobile a p {
+    font-size: 1rem;
+  }
 }
 .banner .left .banner_mobile a img {
   height: 1.6rem;
@@ -249,7 +395,7 @@ header .sub_header {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
 }
-@media (max-width: 800px) {
+@media (max-width: 860px) {
   .ponuka .content {
     grid-template-columns: 1fr;
   }
@@ -476,6 +622,13 @@ footer .footer_bottom div {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 600px) {
+  footer .footer_bottom div {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+}
 footer .footer_bottom div p,
 footer .footer_bottom div a {
   color: #f3f1ef;
@@ -486,6 +639,7 @@ footer .footer_bottom div img {
 }
 footer .footer_bottom div div {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.2rem;

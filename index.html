@@ -10,16 +10,23 @@
 	<body>
 		<header>
 			<nav class="inner">
-				<a href="./index.html" class="current">Ubytovanie</a>
-				<a href="#">Vybavenie a služby</a>
-				<a href="#">História</a>
+				<div class="mobile_language">
+					<div>
+						<a href="#">SK</a>
+						<a href="#">EN</a>
+					</div>
+					<img src="img/under_language.svg" alt="" />
+				</div>
+				<a href="./index.html" class="link current">Ubytovanie</a>
+				<a href="#" class="link">Vybavenie a služby</a>
+				<a href="#" class="link">História</a>
 				<div class="nav_logo">
 					<img src="img/logo.svg" class="skryte" alt="" />
 					<img src="img/logo.svg" alt="" />
 				</div>
-				<a href="#">Kam v lete/zime</a>
-				<a href="#">Rezervácia</a>
-				<div class="lang">
+				<a href="#" class="link">Kam v lete/zime</a>
+				<a href="#" class="link">Rezervácia</a>
+				<div class="lang" id="jazyk">
 					<div class="language">
 						<div>
 							<a href="#">SK</a>
@@ -27,10 +34,31 @@
 						</div>
 						<img src="img/under_language.svg" alt="" />
 					</div>
-					<a href="#">Kontakt</a>
+					<a href="#kontakty">Kontakt</a>
+				</div>
+				<div class="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
 				</div>
 			</nav>
 			<div class="sub_header"></div>
+			<div class="responsive_nav">
+				<div class="close">
+					<div class="cross">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<ul>
+					<li><a href="./index.html" class="link current">Ubytovanie</a></li>
+					<li><a href="#">Vybavenie a služby</a></li>
+					<li><a href="#">História</a></li>
+					<li><a href="#">Kam v lete/zime</a></li>
+					<li><a href="#">Rezervácia</a></li>
+					<li><a href="#kontakty">Kontakt</a></li>
+				</ul>
+			</div>
 		</header>
 		<section class="banner">
 			<div class="left">
@@ -147,9 +175,9 @@
 						<a href="#">Pobytové balíčky</a>
 						<a href="#">3D prehliadka</a>
 						<a href="#">Rezervácia</a>
-						<a href="#">Kontakt</a>
+						<a href="#kontakty">Kontakt</a>
 					</div>
-					<div class="kontakt">
+					<div class="kontakt" id="kontakty">
 						<div class="mail">
 							<img src="img/mail_icon.svg" alt="" />
 							<a href="mailto:naskle@naskle.sk">naskle@naskle.sk</a>
@@ -188,5 +216,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>

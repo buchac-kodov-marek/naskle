@@ -12,15 +12,23 @@ $siva: #f3f1ef;
 	font-family: "Noto Serif", serif;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 h2 {
 	color: $red;
 	font-size: 2rem;
+	text-align: center;
+	@media (max-width: 950px) {
+		font-size: 1.6rem;
+	}
 }
 p {
 	font-weight: 300;
 	font-size: 1.12rem;
 	color: $dark_text;
+	@media (max-width: 950px) {
+		font-size: 1rem;
+	}
 }
 .inner {
 	max-width: 1200px;
@@ -35,12 +43,68 @@ p {
 .current {
 	font-weight: 700;
 }
+.responsive_nav {
+	transform: translateX(105%);
+}
 header {
 	background-color: $siva;
 	nav {
 		display: flex;
 		justify-content: space-between;
 		height: 6.5rem;
+		@media (max-width: 950px) {
+			height: 4rem;
+		}
+		.mobile_language {
+			display: none;
+			@media (max-width: 950px) {
+				display: flex;
+			}
+			flex-direction: column;
+			justify-content: center;
+			gap: 0.1rem;
+			img {
+				width: 4rem;
+			}
+			div {
+				display: flex;
+				justify-content: space-between;
+				a {
+					font-size: 0.8rem;
+					font-weight: 700;
+					margin: 0;
+				}
+			}
+		}
+		.hamburger {
+			cursor: pointer;
+			display: none;
+			width: 4rem;
+			height: 100%;
+			justify-content: center;
+			align-items: flex-end;
+			flex-direction: column;
+			gap: 0.3rem;
+			@media (max-width: 950px) {
+				display: flex;
+			}
+			div {
+				background-color: $red;
+				height: 3px;
+				width: 27px;
+			}
+		}
+
+		.link {
+			@media (max-width: 950px) {
+				display: none;
+			}
+		}
+		#jazyk {
+			@media (max-width: 950px) {
+				display: none;
+			}
+		}
 		a,
 		.lang {
 			color: $red;
@@ -106,6 +170,63 @@ header {
 			$sub_header_gradient1
 		);
 	}
+	.open {
+		transform: translateX(0%);
+	}
+	.responsive_nav {
+		transition: 1s;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: $siva;
+		padding-left: 1em;
+		padding-right: 1em;
+		box-sizing: border-box;
+		.close {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			.cross {
+				cursor: pointer;
+				margin-top: 1rem;
+				margin-right: 1rem;
+				height: 2rem;
+				width: 2rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				div {
+					position: absolute;
+					background-color: $red;
+					height: 3px;
+					width: 30px;
+					transform: rotate(45deg);
+				}
+				div:first-child {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		ul {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 1.4rem;
+			li {
+				list-style: none;
+				a {
+					color: $red;
+					text-decoration: none;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
 }
 .banner {
 	display: flex;
@@ -128,9 +249,15 @@ header {
 			justify-content: center;
 			gap: 2.2rem;
 			align-items: flex-start;
+			@media (max-width: 650px) {
+				gap: 1.5rem;
+			}
 			h1 {
 				color: $siva;
-				font-size: 2rem;
+				font-size: 1.9rem;
+				@media (max-width: 650px) {
+					font-size: 1.7rem;
+				}
 			}
 			a {
 				display: flex;
@@ -143,6 +270,9 @@ header {
 					color: $siva;
 					font-weight: 700;
 					font-size: 1.08rem;
+					@media (max-width: 650px) {
+						font-size: 1rem;
+					}
 				}
 				img {
 					height: 1.6rem;
@@ -242,7 +372,7 @@ header {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 3rem;
-		@media (max-width: 800px) {
+		@media (max-width: 860px) {
 			grid-template-columns: 1fr;
 		}
 		.ponuky {
@@ -441,6 +571,11 @@ footer {
 		div {
 			display: flex;
 			justify-content: space-between;
+			@media (max-width: 600px) {
+				flex-direction: column;
+				align-items: center;
+				gap: 0.4rem;
+			}
 			p,
 			a {
 				color: $siva;
@@ -451,6 +586,7 @@ footer {
 			}
 			div {
 				display: flex;
+				flex-direction: row;
 				justify-content: center;
 				align-items: center;
 				gap: 0.2rem;
