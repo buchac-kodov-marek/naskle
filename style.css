@@ -3,4 +3,74 @@
   font-family: "Noto Serif", serif;
   margin: 0;
   padding: 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+@media (max-width: 700px) {
+  .inner {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.current {
+  font-weight: 700;
+}
+
+header {
+  background-color: #f3f1ef;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  height: 6.5rem;
+}
+header nav a,
+header nav .lang {
+  color: #9b2c05;
+  text-decoration: none;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+header nav .lang {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+header nav .lang a {
+  margin-bottom: 0;
+}
+header nav .lang .language {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+header nav .lang .language img {
+  width: 4rem;
+}
+header nav .lang .language div {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .lang .language div a {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+header nav .nav_logo img {
+  height: 130%;
+}
+header .sub_header {
+  height: 0.4rem;
+  width: 100%;
+  background-image: linear-gradient(to right, #e39f88, #964b25, #e39f88, #964b25, #e39f88, #964b25, #e39f88);
 }/*# sourceMappingURL=style.css.map */
