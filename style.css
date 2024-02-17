@@ -5,6 +5,17 @@
   padding: 0;
 }
 
+h2 {
+  color: #9b2c05;
+  font-size: 2rem;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.12rem;
+  color: #502718;
+}
+
 .inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -183,9 +194,6 @@ header .sub_header {
 }
 .ponuka .content .ponuky p {
   margin-top: 2.5rem;
-  font-weight: 300;
-  font-size: 1.15rem;
-  color: #502718;
   flex: 1;
 }
 .ponuka .content .ponuky a {
@@ -202,6 +210,124 @@ header .sub_header {
 }
 
 .about {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.about .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about .content .left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+.about .content .left a {
+  text-decoration: none;
+  background-color: #9b2c05;
+  padding: 0.5rem 1rem;
+  color: #f3f1ef;
+  font-weight: 600;
+  font-size: 1rem;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+}
+.about .content .right {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.about .content .right .square {
+  width: 22rem;
+  aspect-ratio: 6/4.5;
+  background-color: #9b2c05;
+}
+.about .content .right img {
+  position: absolute;
+  bottom: 2.3rem;
+  right: 2.3rem;
+  width: 22rem;
+}
+
+footer .top {
+  padding: 2rem 0;
+  background-color: #f3f1ef;
+}
+footer .top .inner {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(8em, 14rem));
+}
+footer .top .inner .footer_logo img {
+  height: 11rem;
+}
+footer .top .inner .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+footer .top .inner .nav a {
+  text-decoration: none;
+  color: #9b2c05;
+  font-weight: 500;
+  font-size: 1rem;
+}
+footer .top .inner .kontakt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+footer .top .inner .kontakt .phone,
+footer .top .inner .kontakt .mail {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+footer .top .inner .kontakt .phone div,
+footer .top .inner .kontakt .mail div {
+  display: flex;
+  flex-direction: column;
+}
+footer .top .inner .kontakt .phone a,
+footer .top .inner .kontakt .mail a {
+  font-weight: 700;
+  color: #9b2c05;
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer .top .inner .kontakt .phone img,
+footer .top .inner .kontakt .mail img {
+  height: 1.4rem;
+}
+footer .top .inner .kontakt .address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+footer .top .inner .kontakt .address p {
+  color: #9b2c05;
+  font-weight: 500;
+  font-size: 1rem;
+}
+footer .top .inner .fb {
+  display: flex;
+  gap: 1rem;
+}
+footer .top .inner .fb a {
+  font-weight: 700;
+  color: #9b2c05;
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer .top .inner .fb img {
+  height: 1.4rem;
 }/*# sourceMappingURL=style.css.map */
