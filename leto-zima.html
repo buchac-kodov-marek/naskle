@@ -8,23 +8,20 @@
 		<link rel="stylesheet" type="text/css" href="./slick/slick.css" />
 		<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
 		<style type="text/css">
-			html,
-			body {
-				margin: 0;
-				padding: 0;
-			}
-
 			* {
 				box-sizing: border-box;
 			}
 
 			.slider {
-				width: 95%;
+				width: 100%;
 				margin: 0 auto;
+				@media (max-width: 900px) {
+					width: 90%;
+				}
 			}
 
 			.slick-slide {
-				margin: 0px 20px;
+				margin: 0px 10px;
 			}
 
 			.slick-slide img {
@@ -38,11 +35,15 @@
 
 			.slick-slide {
 				transition: all ease-in-out 0.3s;
-				opacity: 0.2;
+				opacity: 1;
+				height: inherit !important;
 			}
 
 			.slick-active {
 				opacity: 1;
+			}
+			.slick-track {
+				display: flex !important;
 			}
 		</style>
 		<title>NA SKLE MAĽOVANÉ</title>
@@ -139,13 +140,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="zima">
+		<section class="obdobie zima">
 			<div class="inner">
 				<h2>Kam v zime?</h2>
-				<div class="multiple-items slider">
+				<div class="responsive slider">
 					<div class="jeden-slide">
 						<img src="img/winter1.svg" alt="Zimná Kokava" />
-						<h4>bežky v liptovskej kokave</h4>
+						<h5>bežky v liptovskej kokave</h5>
 						<p>
 							Liptovská Kokava je bežkárskym rajom, naše lúky ponúkajú nádherné
 							výhľady na panorámu Západných, Vysokých aj Nízkych Tatier.
@@ -154,7 +155,7 @@
 					</div>
 					<div class="jeden-slide">
 						<img src="img/winter2.svg" alt="Zimná Kokava" />
-						<h4>vyšná boca - bačova roveň</h4>
+						<h5>vyšná boca - bačova roveň</h5>
 						<p>
 							Toto lyžiarske stredisko disponuje umelým zasnežovaním a umelým
 							osvetlením, vzdielené je od nás 20 km.
@@ -162,7 +163,7 @@
 					</div>
 					<div class="jeden-slide">
 						<img src="img/winter3.svg" alt="Zimná Kokava" />
-						<h4>čertovica</h4>
+						<h5>čertovica</h5>
 						<p>
 							Pre náročnejších lyžiarov je Čertovica ideálne stredisko. Je tu k
 							dispozícii niekoľko "čiernych" zjazdoviek s krásnym výhľadom na
@@ -171,11 +172,53 @@
 					</div>
 					<div class="jeden-slide">
 						<img src="img/winter3.svg" alt="Zimná Kokava" />
-						<h4>čertovica</h4>
+						<h5>čertovica</h5>
 						<p>
 							Pre náročnejších lyžiarov je Čertovica ideálne stredisko. Je tu k
 							dispozícii niekoľko "čiernych" zjazdoviek s krásnym výhľadom na
 							Vysoké Tatry. Čertovica je od nás vzdialená 25 km.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="obdobie leto">
+			<div class="inner">
+				<h2>Kam v lete?</h2>
+				<div class="responsive slider">
+					<div class="jeden-slide">
+						<img src="img/summer1.svg" alt="Letná Kokava" />
+						<h5>tatralandia</h5>
+						<p>
+							Najznámejší slovenský aquapark Tatralandia je od nás vzdialený 20
+							km. Ponúka tobogány, bazény, wellness centrum, saunový svet a
+							mnoho ďalších atrakcií.
+						</p>
+					</div>
+					<div class="jeden-slide">
+						<img src="img/summer2.svg" alt="Letná Kokava" />
+						<h5>hrad v liptovskom hrádku</h5>
+						<p>
+							V Liptovskom Hrádku vzdialenom 9 km môžete objaviť pre verejnosť
+							sprístupnený krásny viac ako 400-ročný kaštieľ a už skoro
+							700-ročný gotický hrad.
+						</p>
+					</div>
+					<div class="jeden-slide">
+						<img src="img/summer3.svg" alt="Letná Kokava" />
+						<h5>skanzen v pribyline</h5>
+						<p>
+							Našou najbližšou atrakciou je známy sklanzen ľudovej architektúry
+							v Pribyline vzdialený len 3 km.
+						</p>
+					</div>
+					<div class="jeden-slide">
+						<img src="img/summer3.svg" alt="Letná Kokava" />
+						<h5>skanzen v pribyline</h5>
+						<p>
+							Našou najbližšou atrakciou je známy sklanzen ľudovej architektúry
+							v Pribyline vzdialený len 3 km.
 						</p>
 					</div>
 				</div>
@@ -250,10 +293,27 @@
 		<script type="text/javascript" src="slick/slick.min.js"></script>
 		<script>
 			$(document).ready(function () {
-				$(".multiple-items").slick({
+				$(".responsive").slick({
 					infinite: true,
+					speed: 300,
 					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToScroll: 1,
+					responsive: [
+						{
+							breakpoint: 1000,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2,
+							},
+						},
+						{
+							breakpoint: 650,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1,
+							},
+						},
+					],
 				});
 			});
 		</script>

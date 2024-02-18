@@ -725,6 +725,7 @@ footer {
 			background-color: $siva;
 		}
 		.miestnost {
+			border-radius: 0.3rem;
 			padding: 2rem;
 			margin-bottom: 1.5rem;
 			background-color: $telova;
@@ -771,4 +772,36 @@ footer {
 	height: 100px;
 	width: 100px;
 	background-color: red;
+}
+.obdobie {
+	padding: 1.8rem 0;
+	.inner {
+		h2 {
+			margin-bottom: 2rem;
+		}
+		.slider {
+			.jeden-slide {
+				background-color: $siva;
+				border-radius: 0.3rem;
+				padding: 1rem;
+				height: max-content;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				align-items: flex-start;
+				h5 {
+					text-transform: uppercase;
+					text-align: center;
+					color: $red;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+.zima {
+	margin-top: 2rem;
+}
+.leto {
+	margin-bottom: 4rem;
 }
