@@ -843,4 +843,10 @@ footer .footer_bottom div div {
     height: auto;
     width: 100%;
   }
+}
+
+.test {
+  height: 100px;
+  width: 100px;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
