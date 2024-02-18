@@ -170,6 +170,7 @@ header nav .lang .language div a {
 }
 header nav .nav_logo {
   position: relative;
+  cursor: pointer;
 }
 header nav .nav_logo .skryte {
   visibility: hidden;
