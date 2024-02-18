@@ -664,6 +664,7 @@ footer .footer_bottom div div {
 @media (max-width: 1000px) {
   .banner_text {
     text-align: center;
+    width: auto;
   }
 }
 
