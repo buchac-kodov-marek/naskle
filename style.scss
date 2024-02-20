@@ -929,11 +929,14 @@ footer {
 						font-size: 0.7rem;
 					}
 					@media (max-width: 370px) {
-						font-size: 0.2rem;
+						font-size: 0.6rem;
 					}
 					p {
 						white-space: nowrap;
 						font-weight: 400;
+						@media (max-width: 400px) {
+							font-size: 0.8rem;
+						}
 					}
 					input {
 						font-size: 1em;
@@ -970,6 +973,35 @@ footer {
 					}
 				}
 			}
+		}
+	}
+}
+.karuzel {
+	margin-top: 4rem;
+}
+.vek {
+	background-color: $telova;
+	padding: 2.5rem 0;
+	margin: 2rem 0;
+	.inner {
+		h3 {
+			margin-bottom: 1.5rem;
+		}
+		p {
+			text-align: center;
+		}
+	}
+}
+.pribeh {
+	margin-bottom: 4rem;
+	margin-top: 1.8rem;
+	.inner {
+		h3 {
+			margin-bottom: 2rem;
+		}
+		p {
+			margin-bottom: 1.7rem;
+			text-align: center;
 		}
 	}
 }

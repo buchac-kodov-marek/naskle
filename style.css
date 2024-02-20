@@ -1029,12 +1029,17 @@ footer .footer_bottom div div {
 }
 @media (max-width: 370px) {
   .rezervacia .inner form .box .inputy {
-    font-size: 0.2rem;
+    font-size: 0.6rem;
   }
 }
 .rezervacia .inner form .box .inputy p {
   white-space: nowrap;
   font-weight: 400;
+}
+@media (max-width: 400px) {
+  .rezervacia .inner form .box .inputy p {
+    font-size: 0.8rem;
+  }
 }
 .rezervacia .inner form .box .inputy input {
   font-size: 1em;
@@ -1068,4 +1073,32 @@ footer .footer_bottom div div {
 .rezervacia .inner form .box .rezervovat button {
   border: none;
   cursor: pointer;
+}
+
+.karuzel {
+  margin-top: 4rem;
+}
+
+.vek {
+  background-color: #f4c4b8;
+  padding: 2.5rem 0;
+  margin: 2rem 0;
+}
+.vek .inner h3 {
+  margin-bottom: 1.5rem;
+}
+.vek .inner p {
+  text-align: center;
+}
+
+.pribeh {
+  margin-bottom: 4rem;
+  margin-top: 1.8rem;
+}
+.pribeh .inner h3 {
+  margin-bottom: 2rem;
+}
+.pribeh .inner p {
+  margin-bottom: 1.7rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
