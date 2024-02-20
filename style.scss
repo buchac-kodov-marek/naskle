@@ -838,7 +838,7 @@ footer {
 .leto {
 	margin-bottom: 4rem;
 }
-.kontakt {
+.contacts {
 	margin-top: 4rem;
 	.inner {
 		.kontakt_content {
@@ -892,6 +892,83 @@ footer {
 			}
 			.mapa {
 				flex: 1;
+			}
+		}
+	}
+}
+.rezervacia {
+	margin-top: 4rem;
+	.inner {
+		.poznamka {
+			font-weight: 400;
+		}
+		form {
+			margin-top: 2rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
+			@media (max-width: 1000px) {
+				grid-template-columns: 1fr;
+			}
+			.box {
+				padding: 2rem 1.5rem;
+				background-color: $siva;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 1.5rem;
+				.inputy {
+					display: grid;
+					grid-template-columns: 1fr 5fr;
+					gap: 0.6rem 1.2rem;
+					width: 100%;
+					@media (max-width: 550px) {
+						font-size: 0.8rem;
+					}
+					@media (max-width: 400px) {
+						font-size: 0.7rem;
+					}
+					@media (max-width: 370px) {
+						font-size: 0.2rem;
+					}
+					p {
+						white-space: nowrap;
+						font-weight: 400;
+					}
+					input {
+						font-size: 1em;
+						border: none;
+						padding: 0.18rem;
+					}
+					select {
+						padding: 0.18rem;
+						font-size: 1em;
+						border: none;
+					}
+				}
+				.textarea {
+					display: flex;
+					flex-direction: column;
+					gap: 0.8rem;
+					width: 100%;
+					textarea {
+						width: 100%;
+						padding: 1em;
+						font-size: 1em;
+						border: none;
+					}
+				}
+				.rezervovat {
+					flex: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					button {
+						border: none;
+						cursor: pointer;
+					}
+				}
 			}
 		}
 	}
