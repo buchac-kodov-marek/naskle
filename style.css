@@ -28,6 +28,31 @@ p {
   }
 }
 
+h6 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #502718;
+}
+@media (max-width: 950px) {
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+.a_button {
+  text-decoration: none;
+  background-color: #9b2c05;
+  padding: 0.5rem 1rem;
+  color: #f3f1ef;
+  font-weight: 600;
+  font-size: 1rem;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  color: white;
+  border-radius: 0.3rem;
+}
+
 h3 {
   color: #9b2c05;
   font-size: 1.4rem;
@@ -43,6 +68,19 @@ h4 {
   text-align: center;
   color: #9b2c05;
   font-size: 1.14rem;
+}
+
+h5 {
+  color: #9b2c05;
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 2rem;
+  font-weight: 300;
+}
+@media (max-width: 600px) {
+  h5 {
+    font-size: 1.4rem;
+  }
 }
 
 .inner {
@@ -493,6 +531,7 @@ header .responsive_nav ul li a {
   width: -moz-min-content;
   width: min-content;
   white-space: nowrap;
+  border-radius: 0.3rem;
 }
 .about .content .right {
   margin-top: 2rem;
@@ -606,6 +645,7 @@ footer .top .inner .kontakt .mail img {
 footer .top .inner .kontakt .address {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.4rem;
 }
 footer .top .inner .kontakt .address p {
@@ -883,4 +923,65 @@ footer .footer_bottom div div {
 
 .leto {
   margin-bottom: 4rem;
+}
+
+.kontakt {
+  margin-top: 4rem;
+}
+.kontakt .inner .kontakt_content {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+@media (max-width: 1000px) {
+  .kontakt .inner .kontakt_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.kontakt .inner .kontakt_content .kontakt_info {
+  background-color: #f3f1ef;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.kontakt .inner .kontakt_content .kontakt_info .rezervacny_button {
+  color: white;
+  margin-top: 3rem;
+  align-self: center;
+}
+.kontakt .inner .kontakt_content .kontakt_info h4 {
+  margin-bottom: 2.1rem;
+}
+.kontakt .inner .kontakt_content .kontakt_info .contact {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1.3rem;
+  margin-top: 1rem;
+}
+.kontakt .inner .kontakt_content .kontakt_info .contact div {
+  display: flex;
+  flex-direction: column;
+}
+.kontakt .inner .kontakt_content .kontakt_info .contact .web {
+  text-decoration: underline;
+}
+.kontakt .inner .kontakt_content p {
+  font-weight: 400;
+}
+.kontakt .inner .kontakt_content a {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #502718;
+  text-decoration: none;
+}
+@media (max-width: 950px) {
+  .kontakt .inner .kontakt_content a {
+    font-size: 1rem;
+  }
+}
+.kontakt .inner .kontakt_content .mapa {
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */
