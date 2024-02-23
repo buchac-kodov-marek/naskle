@@ -209,10 +209,13 @@ header nav .lang .language div a {
 header nav .nav_logo {
   position: relative;
   cursor: pointer;
+  width: 12.41rem;
+  height: 100%;
 }
-header nav .nav_logo .skryte {
-  visibility: hidden;
-  position: relative;
+@media (max-width: 950px) {
+  header nav .nav_logo {
+    width: 7.64rem;
+  }
 }
 header nav .nav_logo img {
   top: 0;

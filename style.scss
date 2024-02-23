@@ -187,9 +187,10 @@ header {
 		.nav_logo {
 			position: relative;
 			cursor: pointer;
-			.skryte {
-				visibility: hidden;
-				position: relative;
+			width: 12.41rem;
+			height: 100%;
+			@media (max-width: 950px) {
+				width: 7.64rem;
 			}
 			img {
 				top: 0;
