@@ -39,8 +39,18 @@
 				opacity: 1;
 				height: inherit !important;
 			}
+			.slick-slide {
+				transition: all ease-in-out 0.3s;
+				opacity: 0.2;
+			}
 
 			.slick-active {
+				opacity: 1;
+			}
+			.karuzel .inner .center .slick-active {
+				opacity: 0.5;
+			}
+			.karuzel .inner .center .slick-current {
 				opacity: 1;
 			}
 			.slick-track {
@@ -105,7 +115,14 @@
 		<section class="karuzel">
 			<div class="inner">
 				<h2>História</h2>
-				<div class="slick"></div>
+				<div class="slick center">
+					<div><img src="img/historia1.svg" alt="" /></div>
+					<div><img src="img/historia2.svg" alt="" /></div>
+					<div><img src="img/historia3.svg" alt="" /></div>
+					<div><img src="img/historia1.svg" alt="" /></div>
+					<div><img src="img/historia2.svg" alt="" /></div>
+					<div><img src="img/historia3.svg" alt="" /></div>
+				</div>
 			</div>
 		</section>
 		<section class="vek">
@@ -227,6 +244,11 @@
 							},
 						},
 					],
+				});
+				$(".center").slick({
+					centerMode: true,
+					centerPadding: "60px",
+					slidesToShow: 1,
 				});
 			});
 		</script>

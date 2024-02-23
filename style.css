@@ -1081,6 +1081,10 @@ footer .footer_bottom div div {
 .karuzel {
   margin-top: 4rem;
 }
+.karuzel .inner .center {
+  width: 80%;
+  margin: 2rem auto;
+}
 
 .vek {
   background-color: #f4c4b8;

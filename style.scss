@@ -979,6 +979,10 @@ footer {
 }
 .karuzel {
 	margin-top: 4rem;
+	.inner .center {
+		width: 80%;
+		margin: 2rem auto;
+	}
 }
 .vek {
 	background-color: $telova;
