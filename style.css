@@ -1082,8 +1082,44 @@ footer .footer_bottom div div {
   margin-top: 4rem;
 }
 .karuzel .inner .center {
-  width: 80%;
+  width: 75%;
   margin: 2rem auto;
+}
+@media (max-width: 900px) {
+  .karuzel .inner .center {
+    width: 90%;
+  }
+}
+.karuzel .inner .center .karuzel_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.karuzel .inner .center .karuzel_item p {
+  color: #9b2c05;
+  text-align: center;
+}
+@media (max-width: 550px) {
+  .karuzel .inner .center .karuzel_item p {
+    font-size: 0.88rem;
+  }
+}
+
+.center .slick-center h4 {
+  display: block;
+}
+
+.karuzel_item h4 {
+  display: none;
+}
+
+.center .slick-center p {
+  display: block;
+}
+
+.karuzel_item p {
+  display: none;
 }
 
 .vek {

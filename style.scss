@@ -980,9 +980,37 @@ footer {
 .karuzel {
 	margin-top: 4rem;
 	.inner .center {
-		width: 80%;
+		width: 75%;
 		margin: 2rem auto;
+		@media (max-width: 900px) {
+			width: 90%;
+		}
+		.karuzel_item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+			p {
+				color: $red;
+				text-align: center;
+				@media (max-width: 550px) {
+					font-size: 0.88rem;
+				}
+			}
+		}
 	}
+}
+.center .slick-center h4 {
+	display: block;
+}
+.karuzel_item h4 {
+	display: none;
+}
+.center .slick-center p {
+	display: block;
+}
+.karuzel_item p {
+	display: none;
 }
 .vek {
 	background-color: $telova;
