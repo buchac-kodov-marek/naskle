@@ -301,6 +301,16 @@
 					centerMode: true,
 					centerPadding: "60px",
 					slidesToShow: 1,
+					responsive: [
+						{
+							// v prípade zmeny breakpointu je potrebné to aj zmeniť v CSS
+							// (ctrl + F -> "vyhladat" 410) je potrebne len zmeniť media queries na rovnakú hodnotu
+							breakpoint: 410,
+							settings: {
+								centerMode: false,
+							},
+						},
+					],
 				});
 			});
 		</script>
